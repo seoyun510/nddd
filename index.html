@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>퇴근길 프레시 타임세일 – 리버점</title>
+  <meta name="description" content="리버점 퇴근길 프레시 타임세일 프로모션 페이지 – 매주 월·화 18~20시, 냉장간편식 5~10% 즉시 할인" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --font-sans: 'Noto Sans KR', sans-serif;
+      --font-mono: 'Roboto Mono', monospace;
+      --color-primary: #3a9f41;      /* fresh green */
+      --color-cream: #f8f1e5;        /* cream beige */
+      --color-white: #ffffff;
+      --color-accent: #ff6b6b;      /* coral red */
+      --color-accent2: #ff944d;     /* orange */
+      --color-bg: var(--color-cream);
+      --max-width: 1200px;
+    }
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-bg);
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    a { color: inherit; text-decoration: none; }
+    header { background: var(--color-white); box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .logo { font-size: 1.5rem; font-weight: 700; padding: 1rem; color: var(--color-primary); }
+    nav { display: flex; gap: 1.5rem; align-items: center; }
+    nav a { padding: 0.5rem 0; font-weight: 500; transition: color 0.2s; }
+    nav a:hover { color: var(--color-primary); }
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1rem; }
+    .hero { background: linear-gradient(135deg, #e0f7e9, #dff3d8); padding: 4rem 1rem; text-align: center; }
+    .hero h1 { font-size: 2.5rem; color: var(--color-primary); margin-bottom: 0.5rem; }
+    .hero p { font-size: 1.2rem; margin-bottom: 1.5rem; }
+    .hero .info-box { background: var(--color-white); border-left: 6px solid var(--color-accent); padding: 1rem 1.5rem; margin: 1rem auto; max-width: 600px; text-align: left; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+    .hero .info-box strong { color: var(--color-primary); font-size: 1.1rem; }
+    .hero .cta { display: inline-block; margin-top: 1.5rem; padding: 0.75rem 1.5rem; background: var(--color-accent); color: var(--color-white); border-radius: 6px; font-weight: 600; transition: background 0.3s, transform 0.2s; }
+    .hero .cta:hover { background: var(--color-accent2); transform: translateY(-2px); }
+    .products { padding: 3rem 1rem; background: var(--color-white); }
+    .products h2 { text-align: center; margin-bottom: 2rem; color: var(--color-primary); font-size: 2rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+    .card { background: var(--color-cream); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.07); transition: transform 0.2s; }
+    .card:hover { transform: translateY(-4px); }
+    .card img { width: 100%; height: 180px; object-fit: cover; }
+    .card-body { padding: 0.75rem 1rem; }
+    .card-body h3 { font-size: 1.1rem; margin-bottom: 0.4rem; color: #222; }
+    .price { color: #555; font-size: 0.95rem; }
+    .price .original { text-decoration: line-through; margin-right: 0.5rem; color: #888; }
+    .benefits { padding: 3rem 1rem; background: #f1faf5; }
+    .benefits h2 { text-align: center; margin-bottom: 1.5rem; color: var(--color-primary); }
+    .benefits .items { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; }
+    .benefit-item { display: flex; align-items: center; max-width: 300px; }
+    .benefit-item span { font-size: 2rem; margin-right: 0.75rem; }
+    .benefit-item p { margin: 0; font-weight: 500; }
+    .data { padding: 3rem 1rem; background: var(--color-white); text-align: center; }
+    .data h2 { margin-bottom: 2rem; color: var(--color-primary); }
+    .metrics { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; }
+    .metric { background: var(--color-cream); padding: 1.5rem; border-radius: 8px; width: 260px; }
+    .metric strong { display: block; font-size: 2rem; color: var(--color-primary); margin-bottom: 0.5rem; }
+    .metric p { margin:0; font-size: 0.95rem; }
+    .final-cta { background: var(--color-primary); color: var(--color-white); text-align: center; padding: 3rem 1rem; }
+    .final-cta h2 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .final-cta p { margin-bottom: 1.5rem; }
+    .final-cta .btn { display: inline-block; padding: 0.75rem 1.5rem; background: var(--color-accent); border-radius: 6px; font-weight: 600; transition: background 0.3s; }
+    .final-cta .btn:hover { background: var(--color-accent2); }
+    footer { text-align: center; padding: 1rem; font-size: 0.9rem; color: #777; background: var(--color-cream); }
+    @media (max-width: 600px) { .hero h1 { font-size: 2rem; } .hero p { font-size: 1rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+      <div class="logo">리버점</div>
+      <nav>
+        <a href="#hero">홈</a>
+        <a href="#products">상품</a>
+        <a href="#benefits">혜택</a>
+        <a href="#data">기획 배경</a>
+        <a href="#final-cta">참여</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="hero">
+    <h1>오늘 저녁, 간편하게 한 끼!</h1>
+    <p>퇴근길에 만나는 신선한 간편식 할인 혜택</p>
+    <div class="info-box">
+      <p><strong>행사 요일</strong>: 매주 월요일·화요일</p>
+      <p><strong>행사 시간</strong>: <span style="color:var(--color-accent); font-size:1.2rem;">18:00 ~ 20:00</span></p>
+      <p><strong>할인 혜택</strong>: 인기 냉장 간편식 <span style="color:var(--color-accent2); font-size:1.2rem;">5~10% 즉시 할인</span></p>
+      <p><strong>행사 점포</strong>: 리버점</p>
+    </div>
+    <a class="cta" href="#products">행사 상품 보기</a>
+  </section>
+
+  <section class="products" id="products">
+    <h2>프로모션 상품 소개</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180?text=새우+로제파스타" alt="새우 로제파스타" />
+        <div class="card-body">
+          <h3>새우 로제파스타</h3>
+          <p class="price"><span class="original">7,200원</span> (할인 가격 미확정)</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180?text=닭가슴살+곤약비빔밥" alt="닭가슴살 곤약비빔밥" />
+        <div class="card-body">
+          <h3>닭가슴살 곤약비빔밥</h3>
+          <p class="price"><span class="original">5,200원</span> (할인 가격 미확정)</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180?text=우삼겹+된장찌개" alt="우삼겹 된장찌개" />
+        <div class="card-body">
+          <h3>우삼겹 된장찌개</h3>
+          <p class="price"><span class="original">6,800원</span> (할인 가격 미확정)</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180?text=훈제오리+샐러드랩" alt="훈제오리 샐러드랩" />
+        <div class="card-body">
+          <h3>훈제오리 샐러드랩</h3>
+          <p class="price"><span class="original">6,200원</span> (할인 가격 미확정)</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180?text=매콤+닭갈비볶음밥" alt="매콤 닭갈비볶음밥" />
+        <div class="card-body">
+          <h3>매콤 닭갈비볶음밥</h3>
+          <p class="price"><span class="original">5,500원</span> (할인 가격 미확정)</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x180?text=한끼+소불고기덮밥" alt="한끼 소불고기덮밥" />
+        <div class="card-body">
+          <h3>한끼 소불고기덮밥</h3>
+          <p class="price"><span class="original">5,900원</span> (할인 가격 미확정)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits" id="benefits">
+    <h2>놓치면 아쉬운 퇴근길 할인!</h2>
+    <div class="items">
+      <div class="benefit-item"><span>🗓️</span><p>월·화</p></div>
+      <div class="benefit-item"><span>⏰</span><p>18:00~20:00</p></div>
+      <div class="benefit-item"><span>💲</span><p>5~10% 즉시 할인</p></div>
+      <div class="benefit-item"><span>🏪</span><p>리버점 한정</p></div>
+    </div>
+  </section>
+
+  <section class="data" id="data">
+    <h2>고객 데이터 기반 기획 배경</h2>
+    <div class="metrics">
+      <div class="metric">
+        <strong>61.9%</strong>
+        <p>고객 설문 – 단품 즉시 할인 선호도</p>
+      </div>
+      <div class="metric">
+        <strong>52.4%</strong>
+        <p>평일 18~20시 타임세일 이용 의향</p>
+      </div>
+      <div class="metric">
+        <strong>+35.7%</strong>
+        <p>기존 10% 할인 행사 전후 냉장간편식 6품목 판매량 증가</p>
+      </div>
+    </div>
+    <p style="margin-top:1rem; font-size:0.9rem; color:#555;">※ 위 수치는 과거 분석 결과이며, 신규 타임세일 성과와는 별도입니다.</p>
+  </section>
+
+  <section class="final-cta" id="final-cta">
+    <h2>오늘 저녁 한 끼, 더 합리적으로!</h2>
+    <p>퇴근길 프레시 타임세일에서 간편하고 든든한 한 끼를 만나보세요.</p>
+    <a class="btn" href="#products">행사 상품 확인하기</a>
+  </section>
+
+  <footer>
+    © 2026 리버점 프로모션 페이지
+  </footer>
+</body>
+</html>
